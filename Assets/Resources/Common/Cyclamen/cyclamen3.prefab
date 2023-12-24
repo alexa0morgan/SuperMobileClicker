@@ -2987,7 +2987,7 @@ GameObject:
   - component: {fileID: 2713994300782717994}
   m_Layer: 0
   m_Name: cyclamen3
-  m_TagString: Untagged
+  m_TagString: cyclamen-3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

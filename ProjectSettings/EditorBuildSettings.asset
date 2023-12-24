@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ShopScreen.unity
+    path: Assets/Scenes/ShopScreen/ShopScreen.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainScreen/MainScreen.unity
+    guid: 2ca312669104b864282c1a4ee6d42b09
+  - enabled: 1
+    path: Assets/Scenes/ExhibitionScreen/ExhibitionScreen.unity
+    guid: cf481ba1de0f673449cb60a2bb786172
+  - enabled: 1
+    path: Assets/Scenes/MyPlantsScreen/MyPlantsScreen.unity
+    guid: 244f1aeb495228344a02275406bd8d3a
   m_configObjects: {}

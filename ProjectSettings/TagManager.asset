@@ -3,7 +3,33 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Score
+  - ficus-1
+  - ficus-2
+  - ficus-3
+  - cyclamen-1
+  - cyclamen-2
+  - cyclamen-3
+  - cactus-1
+  - cactus-2
+  - cactus-3
+  - win window
+  - lose window
+  - ExhibitionButtonInactive
+  - ExhibitionTime
+  - ExhibitionParticipateButton
+  - plant-1
+  - plant-2
+  - plant-3
+  - plant-4
+  - PlantTitle
+  - PlantTime
+  - PlantTotalClicks
+  - PlantPhase
+  - Water
+  - Lamp
+  - Fertilizer
   layers:
   - Default
   - TransparentFX
