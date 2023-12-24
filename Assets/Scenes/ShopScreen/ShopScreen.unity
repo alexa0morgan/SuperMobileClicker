@@ -1063,6 +1063,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8238924374556177599, guid: a4df70d7d80dd6744bb8e32b352b1c8f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238924374556177599, guid: a4df70d7d80dd6744bb8e32b352b1c8f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238924374556177599, guid: a4df70d7d80dd6744bb8e32b352b1c8f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1813659773}
+    - target: {fileID: 8238924374556177599, guid: a4df70d7d80dd6744bb8e32b352b1c8f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238924374556177599, guid: a4df70d7d80dd6744bb8e32b352b1c8f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyCyclamen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238924374556177599, guid: a4df70d7d80dd6744bb8e32b352b1c8f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BuyPlant, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238924374556177599, guid: a4df70d7d80dd6744bb8e32b352b1c8f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4df70d7d80dd6744bb8e32b352b1c8f, type: 3}
 --- !u!224 &1022750731 stripped
@@ -1070,6 +1098,59 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5478361807707220765, guid: a4df70d7d80dd6744bb8e32b352b1c8f, type: 3}
   m_PrefabInstance: {fileID: 1022750730}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &1022750732 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8238924374556177598, guid: a4df70d7d80dd6744bb8e32b352b1c8f, type: 3}
+  m_PrefabInstance: {fileID: 1022750730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1076598337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1076598338}
+  - component: {fileID: 1076598339}
+  m_Layer: 0
+  m_Name: CactusButtonHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1076598338
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076598337}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1263558203}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1076598339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076598337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b756cce45e3ca394d97457f8887f88af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1096392949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,16 +1494,33 @@ PrefabInstance:
     - target: {fileID: 8238924374556177599, guid: 3ba49ee020d73c64f9a0190a2406a77b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2050942347}
+      objectReference: {fileID: 1076598339}
     - target: {fileID: 8238924374556177599, guid: 3ba49ee020d73c64f9a0190a2406a77b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238924374556177599, guid: 3ba49ee020d73c64f9a0190a2406a77b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyCactus
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238924374556177599, guid: 3ba49ee020d73c64f9a0190a2406a77b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BuyPlant, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238924374556177599, guid: 3ba49ee020d73c64f9a0190a2406a77b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ba49ee020d73c64f9a0190a2406a77b, type: 3}
 --- !u!224 &1263558202 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5478361807707220765, guid: 3ba49ee020d73c64f9a0190a2406a77b, type: 3}
+  m_PrefabInstance: {fileID: 1263558201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1263558203 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8238924374556177598, guid: 3ba49ee020d73c64f9a0190a2406a77b, type: 3}
   m_PrefabInstance: {fileID: 1263558201}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1327753399
@@ -1604,11 +1702,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8238924374556177599, guid: f72db20b989caf744b7490cded2b5b2f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Buy
+      value: BuyFicus
       objectReference: {fileID: 0}
     - target: {fileID: 8238924374556177599, guid: f72db20b989caf744b7490cded2b5b2f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: FicusBuy, Assembly-CSharp
+      value: BuyPlant, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8238924374556177599, guid: f72db20b989caf744b7490cded2b5b2f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1672,6 +1770,54 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f55a0c7764c4be54ea7e1f4012471ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1813659771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1813659772}
+  - component: {fileID: 1813659773}
+  m_Layer: 0
+  m_Name: CyclamenButtonHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1813659772
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813659771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1022750732}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1813659773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813659771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b756cce45e3ca394d97457f8887f88af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &1814836070

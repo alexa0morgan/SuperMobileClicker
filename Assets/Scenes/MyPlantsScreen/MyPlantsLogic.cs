@@ -114,7 +114,7 @@ public class MyPlantsLogic : MonoBehaviour
     public static PlantRepresentation getPlantNewRepresentationByName(string name)
     {
         PlantRepresentation plantRepresentation = new PlantRepresentation();
-        plantRepresentation.name = "ficus";
+        plantRepresentation.name = name;
         plantRepresentation.phase = 0;
         plantRepresentation.clicks = 0;
 
