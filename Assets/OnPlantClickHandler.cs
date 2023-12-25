@@ -5,7 +5,29 @@ using UnityEngine;
 
 public class OnPlantClickHandler : MonoBehaviour
 {
-    private void OnMouseDown()
+    public DateTime mouseWasHold;
+    public int secondsToHoldToDelete = 5;
+
+    public void MouseHold()
+    {
+        mouseWasHold = DateTime.Now;
+    }
+    public void MouseUnhold()
+    {
+        if ((DateTime.Now - mouseWasHold).TotalSeconds >= secondsToHoldToDelete)
+        {
+            GameObject place = gameObject;
+
+            int index = MyPlantsLogic.getPlantIndexByPlace(place);
+            SaveLoadGameLogic.data.plants.RemoveAt(index);
+
+            MyPlantsLogic.redrawPlants();
+        } else
+        {
+            clickOnPlant();
+        }
+    }
+    public void clickOnPlant()
     {
         GameObject place = gameObject;
         GameObject plant = place.transform.GetChild(0).gameObject;
@@ -24,5 +46,9 @@ public class OnPlantClickHandler : MonoBehaviour
         }
 
         SetScore.RedrawScore();
+    }
+    public void OnMouseDown()
+    {
+        
     }
 }

@@ -15,6 +15,7 @@ public class SetScore : MonoBehaviour
     public static void RedrawScore()
     {
         GameObject nameText = GameObject.FindGameObjectWithTag("Score");
+        if (nameText == null) return;
         var text = nameText.GetComponent<TextMeshProUGUI>();
 
         if (text != null)

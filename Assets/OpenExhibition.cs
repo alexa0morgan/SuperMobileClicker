@@ -63,24 +63,28 @@ public class OpenExhibition : MonoBehaviour
     public static void HideLoseWindow()
     {
         GameObject loseWindow = GameObject.FindGameObjectWithTag("lose window");
+        if (loseWindow == null) return;
         loseWindow.transform.localScale = Vector3.zero;
     }
 
     public static void HideWinWindow()
     {
         GameObject winWindow = GameObject.FindGameObjectWithTag("win window");
+        if (winWindow == null) return;
         winWindow.transform.localScale = Vector3.zero;
     }
 
     public static void ShowLoseWindow()
     {
         GameObject loseWindow = GameObject.FindGameObjectWithTag("lose window");
+        if (loseWindow == null) return;
         loseWindow.transform.localScale = Vector3.one;
     }
 
     public static void ShowWinWindow()
     {
         GameObject winWindow = GameObject.FindGameObjectWithTag("win window");
+        if (winWindow == null) return;
         winWindow.transform.localScale = Vector3.one;
     }
     public static void ShowLoseWindowHandler(Scene scene, LoadSceneMode mode)

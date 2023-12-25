@@ -137,12 +137,18 @@ public class MyPlantsLogic : MonoBehaviour
         return Resources.Load(prefabName) as GameObject;
     }
 
-    public static PlantRepresentation getPlantByPlace(GameObject place)
+    public static int getPlantIndexByPlace(GameObject place)
     {
         string number = place.name.Replace("flower", "");
         int row = Int32.Parse(number.Split('_')[0]);
         int column = Int32.Parse(number.Split('_')[1]);
-        return SaveLoadGameLogic.data.plants[row * 3 + column];
+
+        return row * 3 + column;
+    }
+
+    public static PlantRepresentation getPlantByPlace(GameObject place)
+    {
+        return SaveLoadGameLogic.data.plants[getPlantIndexByPlace(place)];
     }
 
     public static void redrawPlants()

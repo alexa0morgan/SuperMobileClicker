@@ -25,6 +25,7 @@ public class OpenMyPlants : MonoBehaviour
         for (int i = start, j = 1; i < end; i++, j++)
         {
             GameObject panel = GameObject.FindGameObjectWithTag("plant-" + j);
+            if (panel == null) continue;
             panel.transform.localScale = Vector3.one;
 
             foreach( Transform element in panel.GetComponentInChildren<Transform>())
@@ -40,6 +41,7 @@ public class OpenMyPlants : MonoBehaviour
             for (int i = 4; i > plantsOnPage - panelsToDelete; i--)
             {
                 GameObject panel = GameObject.FindGameObjectWithTag("plant-" + i);
+                if (panel == null) continue;
                 panel.transform.localScale = Vector3.zero;
             }
         }
