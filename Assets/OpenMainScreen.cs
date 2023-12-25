@@ -22,6 +22,19 @@ public class OpenMainScreen : MonoBehaviour
     public void Scene1()
     {
         SceneManager.LoadScene("MainScreen");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (!CanBeWatered()) HideWater();
+        if (CanBeWatered()) ShowWater();
+
+        if (!CanBeFertilized()) HideFertilizer();
+        if (CanBeFertilized()) ShowFertilizer();
+
+        if (!CanBeLamped()) HideLamp();
+        if (CanBeLamped()) ShowLamp();
     }
 
     private void Update()
@@ -122,28 +135,42 @@ public class OpenMainScreen : MonoBehaviour
         return (DateTime.Now - dateTimeLastFertilizer).TotalHours >= bonusIntervalInHours;
     }
 
+    public void HideButton(string tag)
+    {
+        GameObject button = GameObject.FindGameObjectWithTag(tag);
+        if (button == null) return;
+        button.transform.localScale = Vector3.zero;
+    }
+
+    public void ShowButton(string tag)
+    {
+        GameObject button = GameObject.FindGameObjectWithTag(tag);
+        if (button == null) return;
+        button.transform.localScale = Vector3.one;
+    }
+
     public void HideWater()
     {
-        GameObject.FindGameObjectWithTag("Water").transform.localScale = Vector3.zero;
+        HideButton("Water");
     }
     public void HideFertilizer()
     {
-        GameObject.FindGameObjectWithTag("Fertilizer").transform.localScale = Vector3.zero;
+        HideButton("Fertilizer");
     }
     public void HideLamp()
     {
-        GameObject.FindGameObjectWithTag("Lamp").transform.localScale = Vector3.zero;
+        HideButton("Lamp");
     }
     public void ShowWater()
     {
-        GameObject.FindGameObjectWithTag("Water").transform.localScale = Vector3.one;
+        ShowButton("Water");
     }
     public void ShowFertilizer()
     {
-        GameObject.FindGameObjectWithTag("Fertilizer").transform.localScale = Vector3.one;
+        ShowButton("Fertilizer");
     }
     public void ShowLamp()
     {
-        GameObject.FindGameObjectWithTag("Lamp").transform.localScale = Vector3.one;
+        ShowButton("Lamp");
     }
 }
