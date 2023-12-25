@@ -168,6 +168,7 @@ public class MyPlantsLogic : MonoBehaviour
 
         foreach (GameObject place in places)
         {
+            if (place == null) continue;
             if (place.transform.childCount > 0)
             {
                 Destroy(place.transform.GetChild(0).gameObject);

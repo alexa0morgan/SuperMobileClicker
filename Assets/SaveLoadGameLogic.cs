@@ -14,8 +14,13 @@ public class SaveLoadGameLogic : MonoBehaviour
     {
         data.money = 1000;
         data.plants = new List<PlantRepresentation>();
+        MyPlantsLogic.plants = data.plants;
         data.dateTimeLastExhibition = DateTime.Now.ToString();
-    }
+        data.dateTimeLastWatering = DateTime.Now.ToString();
+        data.dateTimeLastFertilizer = DateTime.Now.ToString();
+        data.dateTimeLastLamp = DateTime.Now.ToString();
+        data.dateTimeQuit = DateTime.Now.ToString();
+}
 
     void Load()
     {
